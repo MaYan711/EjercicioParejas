@@ -25,6 +25,7 @@ public class ConsoleData {
         return string;
     }
 
+
     public static int getInt(String message, boolean isNeg) {
         viewMessage(message);
         try {

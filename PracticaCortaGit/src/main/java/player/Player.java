@@ -11,56 +11,73 @@ package player;
  */
 public class Player {
     
-    private String nombre;
-    private int edad;
-    private int punteo;
+    private String name;
+    private int age;
+    private int points;
 
-//---------- constructors ---------- \\ 
+    //---------- constructors ---------- \\ 
     public Player() {
     }
 
-    public Player(String nombre, int edad, int punteo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.punteo = punteo;
+    public Player(String name, int age, int points) {
+        this.name = name;
+        this.age = age;
+        this.points = points;
     }
 
-    public Player(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
+    public Player(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-    public Player(String nombre) {
-        this.nombre = nombre;
+    public Player(String name) {
+        this.name = name;
     }
-//---------- end of constructors ----------\\
+    //---------- end of constructors ----------\\
     
     
     //---------- getters & setters ----------\\
-    public String getNombre() {
-        return nombre;
+
+    /**
+     * @return String return the name
+     */
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getEdad() {
-        return edad;
+    /**
+     * @return int return the age
+     */
+    public int getAge() {
+        return age;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    /**
+     * @param age the age to set
+     */
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int getPunteo() {
-        return punteo;
+    /**
+     * @return int return the points
+     */
+    public int getPoints() {
+        return points;
     }
 
-    public void setPunteo(int punteo) {
-        this.punteo = punteo;
+    /**
+     * @param points the points to set
+     */
+    public void setPoints(int points) {
+        this.points = points;
     }
-    
-    
-    
+
 }
