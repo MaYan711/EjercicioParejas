@@ -5,8 +5,8 @@
  */
 package mainPkg;
 
-import org.w3c.dom.Text;
-
+import games.ahorcado.Hangman;
+import player.Player;
 import utils.*;
 
 /**
@@ -22,6 +22,12 @@ public class mainGame {
 
     public mainGame() {
         mainMenu();
+    }
+
+    private Player createPlayer(){
+        String name = ConsoleData.getString("Ingresa tu nombre: ");
+        int age = ConsoleData.getInt("Ingresa tu edad: ", false);
+        return new Player(name, age);
     }
 
     private void mainMenu() {
@@ -42,15 +48,17 @@ public class mainGame {
                     exit = true;
                     break;
                 case 1:
+                    Hangman ahorcado = new Hangman(createPlayer());
+
                     break;
                 case 2:
                     break;
                 case 3:
                     break;
 
-            default:
-                TextArt.showErrorMsg();
-                ConsoleData.waitKey(TextArt.BG_RED + " --> Pulse una tecla para continuar <--" +TextArt.RESET);
+                default:
+                    TextArt.showErrorMsg();
+                    ConsoleData.waitKey(TextArt.BG_RED + " --> Pulse una tecla para continuar <--" + TextArt.RESET);
             }
 
         } while (exit == false);
