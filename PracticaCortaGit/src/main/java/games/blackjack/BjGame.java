@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import utils.ConsoleData;
+import utils.TextArt;
 
 /**
  *
@@ -51,11 +52,17 @@ public class BjGame {
                 handHuman.addcarta(d.getcarta());
                 // System.out.println("Tu dinero : " + dine.toString());
                 System.out.println("Tus cartas: " + handHuman.toString());
-            } else
                 break;
+            }
         }
+<<<<<<< HEAD
         System.out.println("La casa gana: " + handComputer.toString());
         System.out.println("Tiene todavia: " + handHuman.toString());
+=======
+        System.out.println("La casa: " + handComputer.toString());
+        ConsoleData.waitKey(TextArt.BG_RED + " --> Pulse una tecla para continuar <--" + TextArt.RESET);
+
+>>>>>>> 1e1325ba4c57184c9b2e253e5d9aa164cb580366
     }
 
 }

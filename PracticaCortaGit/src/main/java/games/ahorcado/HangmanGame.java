@@ -1,16 +1,21 @@
 package games.ahorcado;
 
+import java.io.Console;
 import java.util.ArrayList;
 
+import player.Player;
 import utils.ConsoleData;
+import utils.TextArt;
 
 public class HangmanGame {
 
     private ArrayList<Character> lettersBag = new ArrayList<Character>();
     private char[] keyChars;
+    private Player player;
 
     public HangmanGame(Hangman hangman) {
         keyChars = new char[hangman.getKeyWord().length()];
+        this.player = hangman.getPlayer();
         refilKeyChars();
         hangmanGame(hangman);
     }
@@ -22,27 +27,30 @@ public class HangmanGame {
             String letter = ConsoleData.getString("ingresa la letra de la palbra: ");
 
             if (letter.equals(hangman.getKeyWord())) {
-                System.out.println("felicidades encontro la palabra: " + hangman.getKeyWord());
+                TextArt.showWinMessage();
+                System.out.println(TextArt.GREEN+"\nfelicidades encontro la palabra: " + hangman.getKeyWord()+TextArt.RESET);
                 openKey = true;
             } else {
 
                 if (!letter.equals("") && isNewLetter(letter.charAt(0))) {
+
                     boolean isPart = wordAnalyzer(hangman.getKeyWord(), letter.charAt(0));
 
                     if (isPart) {
                         System.out.println("felicidades la letra pertenece a la palabra");
                     } else {
                         hangman.setHints(hangman.getHints() - 1);
-                        System.out.println("la letra ingresada no esta en lapalabra, vuelva a intentarlo\n"
-                                + "le quedan " + hangman.getHints() + " intentos");
+                        System.out.println(TextArt.RED+ "Has fallado" + TextArt.RESET);
+                        TextArt.drawHangaman(hangman.getHints());
                     }
-
                 }
 
                 showKeyWord();
             }
 
         } while (hangman.getHints() != 0 && openKey == false);
+
+        endGame();
 
     }
 
@@ -87,11 +95,24 @@ public class HangmanGame {
     }
 
     private void showKeyWord() {
-        String keyWord = "";
+        String keyWord = "\n\t";
         for (char letter : keyChars) {
             keyWord += letter;
         }
-        System.out.println(keyWord);
+        System.out.println(TextArt.GREEN + keyWord + TextArt.RESET);
+
+    }
+
+    private void endGame() {
+        switch (ConsoleData.getInt("Para continuar jugando presione 1\n" +
+                "Para regresar al menu presione 0\n", false)) {
+            case 1:
+                new HangmanGame(new Hangman());
+                break;
+
+            default:
+                break;
+        }
 
     }
 
