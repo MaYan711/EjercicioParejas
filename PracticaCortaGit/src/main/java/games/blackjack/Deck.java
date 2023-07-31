@@ -16,7 +16,7 @@ public class Deck {
     carta cartas [] = new carta[52];
     int position;
     
-    public void createCards(){
+    public void createcarta(){
         String symbols = "123456789JQKA";
         String types = "SCDH";
         int index =0;
