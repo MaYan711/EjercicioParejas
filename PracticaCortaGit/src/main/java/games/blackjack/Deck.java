@@ -18,7 +18,7 @@ public class Deck {
     
     public void createcarta(){
         String symbols = "123456789JQKA";
-        String types = "SCDH";
+        String types = "CTPD";
         int index =0;
         
         for (int i=0; i < types.length(); i++){
