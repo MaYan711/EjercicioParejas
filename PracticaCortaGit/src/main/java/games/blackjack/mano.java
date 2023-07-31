@@ -15,7 +15,7 @@ public class mano {
     ArrayList<carta> arr = new ArrayList<carta>();
     int positin = 0;
     
-    public void addCard(carta c){
+    public void addcarta(carta c){
         arr.add(c);
     }
     

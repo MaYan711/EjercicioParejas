@@ -19,16 +19,16 @@ public class BjGame {
      */
     public BjGame() {
         Deck d = new Deck();
-        d.createCards();
+        d.createcarta();
         mano handComputer = new mano();
         mano handHuman = new mano();
-        handComputer.addCard(d.getcarta());
-        handComputer.addCard(d.getcarta());
-        handHuman.addCard(d.getcarta());
-        handHuman.addCard(d.getcarta());
+        handComputer.addcarta(d.getcarta());
+        handComputer.addcarta(d.getcarta());
+        handHuman.addcarta(d.getcarta());
+        handHuman.addcarta(d.getcarta());
 
         while (handComputer.getValue() <= 16) {
-            handComputer.addCard(d.getcarta());
+            handComputer.addcarta(d.getcarta());
         }
 
         // System.out.println("Cuanto dinero tiene?: " + dine.toString());
@@ -36,7 +36,7 @@ public class BjGame {
         String teclado = ConsoleData.getString("Que desea hacer? quedarse[q] o plantarse [p]");
         while ((teclado) != null) {
             if (teclado.equalsIgnoreCase("q")) {
-                handHuman.addCard(d.getcarta());
+                handHuman.addcarta(d.getcarta());
                 // System.out.println("Tu dinero : " + dine.toString());
                 System.out.println("Tus cartas: " + handHuman.toString());
                 break;
