@@ -13,7 +13,7 @@ public class Hangman {
     public Hangman(Player player) {
         this.keyWord = getNewKeyWord();
         this.player = player;
-        HangmanGame hangmanGame = new HangmanGame(this);
+        new HangmanGame(this);
     }
 
     private String getNewKeyWord() {

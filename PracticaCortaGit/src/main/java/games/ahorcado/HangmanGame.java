@@ -6,16 +6,13 @@ import utils.ConsoleData;
 
 public class HangmanGame {
 
-    private Hangman hangman;
     private ArrayList<Character> lettersBag = new ArrayList<Character>();
     private char[] keyChars;
 
     public HangmanGame(Hangman hangman) {
-        this.hangman = hangman;
         keyChars = new char[hangman.getKeyWord().length()];
         refilKeyChars();
         hangmanGame(hangman);
-
     }
 
     private void hangmanGame(Hangman hangman) {

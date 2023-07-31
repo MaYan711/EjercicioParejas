@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package blackjack;
+package games.blackjack;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ public class mano {
     ArrayList<carta> arr = new ArrayList<carta>();
     int positin = 0;
     
-    public void addcarta(carta c){
+    public void addCard(carta c){
         arr.add(c);
     }
     

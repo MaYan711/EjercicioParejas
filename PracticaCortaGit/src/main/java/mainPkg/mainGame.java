@@ -6,6 +6,7 @@
 package mainPkg;
 
 import games.ahorcado.Hangman;
+import games.blackjack.BjGame;
 import player.Player;
 import utils.*;
 
@@ -17,7 +18,7 @@ public class mainGame {
 
     public static void main(String[] args) {
 
-        mainGame newGame = new mainGame();
+        new mainGame();
     }
 
     public mainGame() {
@@ -48,12 +49,13 @@ public class mainGame {
                     exit = true;
                     break;
                 case 1:
-                    Hangman ahorcado = new Hangman(createPlayer());
+                    new Hangman(createPlayer());
 
                     break;
                 case 2:
                     break;
                 case 3:
+                    new BjGame();
                     break;
 
                 default:

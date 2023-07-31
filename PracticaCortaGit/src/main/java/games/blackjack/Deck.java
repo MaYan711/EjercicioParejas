@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package blackjack;
+package games.blackjack;
 
 
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import java.util.Collections;
  *
  * @author LL829
  */
-public class mazo {
+public class Deck {
     carta cartas [] = new carta[52];
     int position;
     
@@ -22,7 +22,7 @@ public class mazo {
         int index =0;
         
         for (int i=0; i < types.length(); i++){
-            for (int j=0; j < symbols.length(); j++);{
+            for (int j=0; j < symbols.length(); j++){
             carta tempcarta = new carta();
             tempcarta.setSymbol(symbols.charAt(j));
             tempcarta.setType(types.charAt(i));
