@@ -16,6 +16,11 @@ public class Hangman {
         new HangmanGame(this);
     }
 
+    public Hangman() {
+        this.keyWord = getNewKeyWord();
+        new HangmanGame(this);
+    }
+
     private String getNewKeyWord() {
         int pick = new Random().nextInt(enumKeyWords.values().length);
         return enumKeyWords.values()[pick].toString();

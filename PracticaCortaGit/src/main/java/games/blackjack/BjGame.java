@@ -6,6 +6,7 @@
 package games.blackjack;
 
 import utils.ConsoleData;
+import utils.TextArt;
 
 /**
  *
@@ -38,10 +39,12 @@ public class BjGame {
                 handHuman.addCard(d.getcarta());
                 // System.out.println("Tu dinero : " + dine.toString());
                 System.out.println("Tus cartas: " + handHuman.toString());
-            } else
                 break;
+            }
         }
         System.out.println("La casa: " + handComputer.toString());
+        ConsoleData.waitKey(TextArt.BG_RED + " --> Pulse una tecla para continuar <--" + TextArt.RESET);
+
     }
 
 }

@@ -41,7 +41,6 @@ public class mainGame {
             System.out.println("\n\n1. Jugar ahorcado");
             System.out.println("2. Jugar baloncesto");
             System.out.println("3. Jugar cartas");
-            System.out.println("4. Ver instrucciones");
             System.out.println("0. Salir");
 
             switch (ConsoleData.getInt("Ingrese la opcion seleccionada: ", false)) {
@@ -53,6 +52,7 @@ public class mainGame {
 
                     break;
                 case 2:
+
                     break;
                 case 3:
                     new BjGame();
