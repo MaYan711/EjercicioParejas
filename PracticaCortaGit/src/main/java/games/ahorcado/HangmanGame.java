@@ -29,6 +29,7 @@ public class HangmanGame {
                 TextArt.showWinMessage();
                 System.out.println(TextArt.GREEN+"\nfelicidades encontro la palabra: " + hangman.getKeyWord()+TextArt.RESET);
                 openKey = true;
+                this.player.setPoints(this.player.getPoints()+1);
             } else {
 
                 if (!letter.equals("") && isNewLetter(letter.charAt(0))) {
@@ -38,7 +39,7 @@ public class HangmanGame {
                     if (isPart) {
                         System.out.println("felicidades la letra pertenece a la palabra");
                     } else {
-                        hangman.setHints(hangman.getHints() - 1);
+                            hangman.setHints(hangman.getHints() - 1);
                         System.out.println(TextArt.RED+ "Has fallado" + TextArt.RESET);
                         TextArt.drawHangaman(hangman.getHints());
                     }
