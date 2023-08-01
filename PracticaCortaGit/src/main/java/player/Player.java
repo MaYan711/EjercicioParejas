@@ -36,6 +36,15 @@ public class Player {
     public Player(String name) {
         this.name = name;
     }
+    
+    
+    public int getDinero(){
+        return (int) dinero;
+    }
+    
+    public void setDinero(){
+        this.dinero = dinero;
+    }
     //---------- end of constructors ----------\\
     
     

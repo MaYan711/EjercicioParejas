@@ -32,6 +32,12 @@ public class mainGame {
         int age = ConsoleData.getInt("Ingresa tu edad: ", false);
         return new Player(name, age);
     }
+    
+    private Player createPlay() {
+        String name = ConsoleData.getString("Ingresa tu nombre: ");
+        int dinero = ConsoleData.getInt("Ingresa tu dinero: ", false);
+        return new Player(name, dinero);
+    }
 
     private void mainMenu() {
 
@@ -58,6 +64,7 @@ public class mainGame {
                     break;
                 case 3:
                     try {
+                        //new //BjGame(createPlay());
                         new BjGame();
                     } catch (IOException e) {
                         e.printStackTrace();

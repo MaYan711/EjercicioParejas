@@ -10,6 +10,7 @@ import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.ConsoleHandler;
+import player.Player;
 
 import utils.ConsoleData;
 import utils.TextArt;
@@ -42,13 +43,13 @@ public class BjGame {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
 
-         System.out.println("Cuanto dinero tiene?: "); // + dine.toString());
-         System.out.println(" ");
-         System.out.println(" ");
-         System.out.println(" ");
+         
         System.out.println("Tus cartas: " + handHuman.toString());
+         System.out.println(" ");
+         System.out.println("Cuanto dinero tiene?: "); // + dine.toString());
+         System.out.println("Cada entrada cuesta $25");
 
-        ConsoleData.getString("Que desea hacer? quedarse[q] o plantarse[p]");
+        //ConsoleData.getString("Que desea hacer? quedarse[q] o plantarse[p]");
         System.out.println("Que desea hacer? quedarse[q] o plantarse [p]");
         String teclado = "";
         
@@ -57,15 +58,21 @@ public class BjGame {
                 handHuman.addcarta(d.getcarta());
                 // System.out.println("Tu dinero : " + dine.toString());
                 System.out.println("Tus cartas: " + handHuman.toString());
+            }
+            else 
                 break;
             }
-        }
+        
 
         System.out.println("La casa gana: " + handComputer.toString());
         System.out.println("Tiene todavia: " + handHuman.toString());
 
         ConsoleData.waitKey(TextArt.BG_RED + " --> Pulse una tecla para continuar <--" + TextArt.RESET);
 
+    }
+
+    public BjGame(Player createPlay) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }   
