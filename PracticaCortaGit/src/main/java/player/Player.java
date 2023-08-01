@@ -14,6 +14,7 @@ public class Player {
     private String name;
     private int age;
     private int points;
+    private double dinero;
 
     //---------- constructors ---------- \\ 
     public Player() {
@@ -29,6 +30,8 @@ public class Player {
         this.name = name;
         this.age = age;
     }
+
+    
 
     public Player(String name) {
         this.name = name;
@@ -81,3 +84,4 @@ public class Player {
     }
 
 }
+

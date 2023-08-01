@@ -5,6 +5,8 @@
  */
 package mainPkg;
 
+import java.io.IOException;
+
 import games.ahorcado.Hangman;
 import games.blackjack.BjGame;
 import player.Player;
@@ -25,7 +27,7 @@ public class mainGame {
         mainMenu();
     }
 
-    private Player createPlayer(){
+    private Player createPlayer() {
         String name = ConsoleData.getString("Ingresa tu nombre: ");
         int age = ConsoleData.getInt("Ingresa tu edad: ", false);
         return new Player(name, age);
@@ -55,7 +57,11 @@ public class mainGame {
 
                     break;
                 case 3:
-                    new BjGame();
+                    try {
+                        new BjGame();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
 
                 default:

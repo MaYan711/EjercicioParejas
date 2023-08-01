@@ -6,8 +6,11 @@
 package games.blackjack;
 
 import java.io.BufferedReader;
+import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.logging.ConsoleHandler;
+
 import utils.ConsoleData;
 import utils.TextArt;
 
@@ -44,6 +47,8 @@ public class BjGame {
          System.out.println(" ");
          System.out.println(" ");
         System.out.println("Tus cartas: " + handHuman.toString());
+
+        ConsoleData.getString("Que desea hacer? quedarse[q] o plantarse[p]");
         System.out.println("Que desea hacer? quedarse[q] o plantarse [p]");
         String teclado = "";
         
@@ -55,14 +60,12 @@ public class BjGame {
                 break;
             }
         }
-<<<<<<< HEAD
+
         System.out.println("La casa gana: " + handComputer.toString());
         System.out.println("Tiene todavia: " + handHuman.toString());
-=======
-        System.out.println("La casa: " + handComputer.toString());
+
         ConsoleData.waitKey(TextArt.BG_RED + " --> Pulse una tecla para continuar <--" + TextArt.RESET);
 
->>>>>>> 1e1325ba4c57184c9b2e253e5d9aa164cb580366
     }
 
-}
+}   
