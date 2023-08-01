@@ -1,6 +1,5 @@
 package games.ahorcado;
 
-import java.io.Console;
 import java.util.ArrayList;
 
 import player.Player;

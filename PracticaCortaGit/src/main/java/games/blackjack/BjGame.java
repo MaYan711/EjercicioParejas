@@ -6,10 +6,8 @@
 package games.blackjack;
 
 import java.io.BufferedReader;
-import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.logging.ConsoleHandler;
 import player.Player;
 
 import utils.ConsoleData;
@@ -24,15 +22,11 @@ public class BjGame {
     /**
      * @param args the command line arguments
      */
-    public BjGame() throws IOException {
-        
-        
-        
+    public BjGame(Player player) throws IOException {
+
         Deck d = new Deck();
-        
+
         d.createcarta();
-       // m.createdine();
-      //  dine dinero = new dine();
         mano handComputer = new mano();
         mano handHuman = new mano();
         handComputer.addcarta(d.getcarta());
@@ -43,30 +37,27 @@ public class BjGame {
         while (handComputer.getValue() <= 16) {
             handComputer.addcarta(d.getcarta());
         }
-        
+
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
 
-         
         System.out.println("Tus cartas: " + handHuman.toString());
-         System.out.println(" ");
-         System.out.println("Cuanto dinero tiene?: "); // + dine.toString());
-         System.out.println("Cada entrada cuesta $25");
+        System.out.println(" ");
+        System.out.println("Cuanto dinero tiene?: "); // + dine.toString());
+        System.out.println("Cada entrada cuesta $25");
 
-        //ConsoleData.getString("Que desea hacer? quedarse[q] o plantarse[p]");
+        // ConsoleData.getString("Que desea hacer? quedarse[q] o plantarse[p]");
         System.out.println("Que desea hacer? quedarse[q] o plantarse [p]");
         String teclado = "";
-        
+
         while ((teclado = br.readLine()) != null) {
             if (teclado.equalsIgnoreCase("q")) {
                 handHuman.addcarta(d.getcarta());
                 // System.out.println("Tu dinero : " + dine.toString());
                 System.out.println("Tus cartas: " + handHuman.toString());
-            }
-            else 
+            } else
                 break;
-            }
-        
+        }
 
         System.out.println("La casa gana: " + handComputer.toString());
         System.out.println("Tiene todavia: " + handHuman.toString());
@@ -75,12 +66,5 @@ public class BjGame {
 
     }
 
-    public BjGame(Player createPlay) {
-        
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-       
-       
-       
-    }
 
-}   
+}

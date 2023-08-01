@@ -50,7 +50,7 @@ public class Player {
         return (int) dinero;
     }
     
-    public void setDinero(){
+    public void setDinero(int dinero){
         this.dinero = dinero;
     }
     //---------- end of constructors ----------\\

@@ -65,7 +65,6 @@ public class mainGame {
                 case 3:
                     try {
                         new BjGame(createPlay());
-                        new BjGame();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
