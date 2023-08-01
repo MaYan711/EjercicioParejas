@@ -30,6 +30,11 @@ public class Player {
         this.name = name;
         this.age = age;
     }
+    
+    public Player(String name, double dinero) {
+        this.name = name;
+        this.dinero = dinero;
+    }
 
     
 
@@ -37,6 +42,9 @@ public class Player {
         this.name = name;
     }
     
+    public Player(Double dinero){
+        this.dinero = dinero;
+    }
     
     public int getDinero(){
         return (int) dinero;

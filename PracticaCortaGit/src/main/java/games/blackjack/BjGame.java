@@ -25,7 +25,11 @@ public class BjGame {
      * @param args the command line arguments
      */
     public BjGame() throws IOException {
+        
+        
+        
         Deck d = new Deck();
+        
         d.createcarta();
        // m.createdine();
       //  dine dinero = new dine();
@@ -72,7 +76,11 @@ public class BjGame {
     }
 
     public BjGame(Player createPlay) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
+       
+       
     }
 
 }   
